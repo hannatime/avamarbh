@@ -1,0 +1,58 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @data.each do |article| %>
+      <tr>
+        <td><%= article.id %></td>
+      </tr>
+  <% end %>
+</table>
+
+<table>
+  <tr>
+    <th>ID</th>
+  </tr>
+
+  <% @data.each do |d| %>
+      <tr>
+        <td><%=d[:name] %></td>
+      </tr>
+  <% end %>
+</table>
+
+
+<table>
+  <tr>
+    <th>AuthID</th>
+    <th>Version</th>
+  </tr>
+
+  <tr>
+    <td><%=@JsonData %></td>
+    <td><%=@authvalue %></td>
+  </tr>
+
+</table>
+
+<h2>API Version JSON</h2>
+<%=@versionJson %>
+
+
+<h2>API Version</h2>
+<% @entrypoint.each do |article| %>
+    <tr>
+      <td><%= article[:] %></td>
+    </tr>
+<% end %>
+
+<h2>API Version only</h2>
+<%= @version[0] %>
+<br>
+<%= @test2 %>
+<br>
+
+<br>
